@@ -25,7 +25,9 @@ class Phim extends Model
         'DaoDien',
     ];
 
-    
+    /**
+     * Quan hệ: 1 phim có nhiều suất chiếu
+     */
     protected $casts = [
         'NgayKhoiChieu' => 'date',
     ];

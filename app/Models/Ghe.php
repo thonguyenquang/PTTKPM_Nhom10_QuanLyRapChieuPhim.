@@ -19,25 +19,34 @@ class Ghe extends Model
         'SoGhe'
     ];
 
-   
+    /**
+     * Mối quan hệ với bảng PhongChieu
+     */
     public function phongChieu()
     {
         return $this->belongsTo(PhongChieu::class, 'MaPhong', 'MaPhong');
     }
 
-    
+    /**
+     * Mối quan hệ với bảng Ve
+     * (dùng query thủ công vì Eloquent không hỗ trợ composite key natively)
+     */
     public function ves()
     {
         return Ve::where('MaPhong', $this->MaPhong)
                  ->where('SoGhe', $this->SoGhe);
     }
 
-    
+    /**
+     * Override để khi update/save thì Laravel biết
+     * dùng MaPhong + SoGhe làm điều kiện
+     */
+    // Add this method to handle composite keys for update:
     protected function setKeysForSaveQuery($query)
     {
     return $query->where([
         'MaPhong' => $this->getAttribute('MaPhong'),
-        'SoGhe' => $this->getOriginal('SoGhe') 
+        'SoGhe' => $this->getOriginal('SoGhe') // Use original value for where clause
     ]);
     }
     

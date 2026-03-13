@@ -19,13 +19,17 @@ class PhongChieu extends Model
         'LoaiPhong',
     ];
 
-   
+    /**
+     * 1 Phòng chiếu có nhiều Suất chiếu
+     */
     public function suatChieu()
     {
         return $this->hasMany(SuatChieu::class, 'MaPhong', 'MaPhong');
     }
 
-   
+    /**
+     * 1 Phòng chiếu có nhiều Ghế
+     */
     public function ghe()
     {
         return $this->hasMany(Ghe::class, 'MaPhong', 'MaPhong');
