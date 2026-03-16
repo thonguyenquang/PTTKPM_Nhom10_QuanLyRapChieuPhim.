@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-    /* Tông màu chủ đạo đen trắng cổ điển */
+   
     :root {
         --primary-color: #2c3e50;
         --secondary-color: #34495e;
@@ -363,44 +363,7 @@
         <a href="{{ url('/admin/ve') }}" class="btn btn-primary">nút reset trang vé</a>
         <div id="alertContainer"></div>
 
-        <!-- Form thêm vé -->
-        <div class="row mt-4">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header bg-primary text-white">
-                        <h5 class="mb-0"><i class="fas fa-plus-circle"></i> Thêm vé mới</h5>
-                    </div>
-                    <div class="card-body">
-                        <form id="formThemVe">
-                            @csrf
-                            <div class="mb-3">
-                                <label for="MaSuatChieu" class="form-label">Mã suất chiếu *</label>
-                                <input type="number" class="form-control" id="MaSuatChieu" name="MaSuatChieu" required>
-                                <div class="invalid-feedback" id="error-MaSuatChieu"></div>
-                            </div>
-                            
-                            <div class="mb-3">
-                                <label for="SoGhe" class="form-label">Số ghế *</label>
-                                <input type="text" class="form-control" id="SoGhe" name="SoGhe" maxlength="5" required>
-                                <div class="invalid-feedback" id="error-SoGhe"></div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="MaHoaDon" class="form-label">Mã hóa đơn</label>
-                                <input type="number" class="form-control" id="MaHoaDon" name="MaHoaDon">
-                                <div class="invalid-feedback" id="error-MaHoaDon"></div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="GiaVe" class="form-label">Giá vé *</label>
-                                <input type="number" step="0.01" class="form-control" id="GiaVe" name="GiaVe" required>
-                                <div class="invalid-feedback" id="error-GiaVe"></div>
-                            </div>
-                            <button type="submit" class="btn btn-success">
-                                <i class="fas fa-save"></i> Tạo vé
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
+        
 
             <!-- Tìm kiếm & Thống kê -->
             <div class="col-md-6">

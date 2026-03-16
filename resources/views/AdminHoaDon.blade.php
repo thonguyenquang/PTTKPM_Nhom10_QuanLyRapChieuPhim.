@@ -354,38 +354,7 @@
         <a href="{{ url('/admin/hoadon') }}" class="btn btn-primary">nút reset trang hóa đơn</a>
         <div id="alertContainer"></div>
 
-        <!-- Form thêm hóa đơn -->
-        <div class="row mt-4">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header bg-primary text-white">
-                        <h5 class="mb-0"><i class="fas fa-plus-circle"></i> Thêm hóa đơn mới</h5>
-                    </div>
-                    <div class="card-body">
-                        <form id="formThemHoaDon">
-                            @csrf
-                            <div class="mb-3">
-                                <label for="MaNhanVien" class="form-label">Mã nhân viên</label>
-                                <input type="number" class="form-control" id="MaNhanVien" name="MaNhanVien">
-                                <div class="invalid-feedback" id="error-MaNhanVien"></div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="MaKhachHang" class="form-label">Mã khách hàng</label>
-                                <input type="number" class="form-control" id="MaKhachHang" name="MaKhachHang">
-                                <div class="invalid-feedback" id="error-MaKhachHang"></div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="TongTien" class="form-label">Tổng tiền *</label>
-                                <input type="number" step="0.01" class="form-control" id="TongTien" name="TongTien" required>
-                                <div class="invalid-feedback" id="error-TongTien"></div>
-                            </div>
-                            <button type="submit" class="btn btn-success">
-                                <i class="fas fa-save"></i> Tạo hóa đơn
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
+        
 
             <!-- Tìm kiếm & Thống kê -->
             <div class="col-md-6">
